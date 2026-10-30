@@ -1,0 +1,138 @@
+/* Cores da paleta do Fabri3D */
+:root {
+  --cor-preto: #17191D;
+  --cor-grafite: #30343B;
+  --cor-laranja: #F97316;
+  --cor-cinza-claro: #F3F4F6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cor-preto);
+  color: var(--cor-cinza-claro);
+}
+
+/* Layout: duas colunas no computador, uma no celular */
+.pagina-login {
+  display: flex;
+  min-height: 100vh;
+}
+
+.painel-marca {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.logo {
+  font-size: 56px;
+}
+
+.logo span {
+  color: var(--cor-laranja);
+}
+
+.slogan {
+  margin-top: 12px;
+  color: #9CA3AF;
+  font-size: 18px;
+}
+
+.painel-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: var(--cor-grafite);
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--cor-preto);
+  border: 1px solid #3f434b;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+/* Abas Login e Cadastrar */
+.abas {
+  display: flex;
+  border-bottom: 1px solid #3f434b;
+  margin-bottom: 24px;
+}
+
+.aba {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #9CA3AF;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.aba-ativa {
+  color: var(--cor-cinza-claro);
+  border-bottom: 2px solid var(--cor-laranja);
+}
+
+/* Campos */
+.formulario label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 12px;
+  background: var(--cor-grafite);
+  border: 1px solid #4a4f58;
+  border-radius: 6px;
+  color: var(--cor-cinza-claro);
+  font-size: 15px;
+}
+
+/* Botão principal */
+.botao-principal {
+  width: 100%;
+  margin-top: 24px;
+  padding: 14px;
+  background: var(--cor-laranja);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.rodape-card {
+  margin-top: 24px;
+  font-size: 12px;
+  text-align: center;
+  color: #9CA3AF;
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  .pagina-login {
+    flex-direction: column;
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+}
