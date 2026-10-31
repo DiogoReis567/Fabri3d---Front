@@ -1,7 +1,9 @@
 /* Cores da paleta do Fabri3D */
 :root {
-  --cor-preto: #17191D;
-  --cor-grafite: #30343B;
+  --cor-preto: #12151A;
+  --cor-cinza: #1C2127;
+  --cor-cinza-diferente: #21262c;
+  --cor-grafite: #171C22;
   --cor-laranja: #F97316;
   --cor-cinza-claro: #F3F4F6;
 }
@@ -58,8 +60,8 @@ body {
 
 .card {
   width: 100%;
-  max-width: 400px;
-  background: var(--cor-preto);
+  max-width: 475px;
+  background: var(--cor-cinza);
   border: 1px solid #3f434b;
   border-radius: 8px;
   padding: 24px;
@@ -98,7 +100,7 @@ body {
 .formulario input {
   width: 100%;
   padding: 12px;
-  background: var(--cor-grafite);
+  background: var(--cor-cinza-diferente);
   border: 1px solid #4a4f58;
   border-radius: 6px;
   color: var(--cor-cinza-claro);
