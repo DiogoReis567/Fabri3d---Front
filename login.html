@@ -6,7 +6,7 @@
   <title>Fabri3D - Login</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" href="assets/favicon/favicon.png" type="image/png">
-  
+  <script src="login.js" defer></script>
 </head>
 <body>
   <main class="pagina-login">
@@ -18,11 +18,11 @@
     <section class="painel-form">
       <div class="card">
         <nav class="abas">
-          <button class="aba aba-ativa">Login</button>
-          <button class="aba">Cadastrar</button>
+          <button class="aba aba-ativa" id="login">Login</button>
+          <button class="aba" id="cadastrar">Cadastrar</button>
         </nav>
 
-        <form class="formulario">
+        <form class="formulario" id="formulario-login">
           <label for="email">E-mail</label>
           <div id="campo-email">
             <img src="assets/icons/email.svg" alt="" class="icone-input">
@@ -38,7 +38,7 @@
           <button type="submit" class="botao-principal">Entrar</button>
         </form>
 
-        <form class="formulario" hidden>
+        <form class="formulario" id="formulario-cadastro" hidden>
           <label for="nome">Nome</label>
           <div id="campo-nome">
             <img src="assets/icons/usuario.svg" alt="" class="icone-input">
