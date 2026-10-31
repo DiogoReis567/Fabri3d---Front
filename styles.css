@@ -1,14 +1,11 @@
 /* Cores da paleta do Fabri3D */
 :root {
-  :root {
-  --preto: #12151A;        /* lado esquerdo: fundo da marca Fabri3D */
-  --grafite: #171C22;      /* lado direito: fundo da área do formulário */
+  --preto: #12151A;        /* lado esquerdo: fundo da marca e fundo da página */
   --cinza-escuro: #1C2127; /* o card de login (caixa com abas e campos) */
-  --cinza-medio: #21262c;  /* bordas do card e divisórias das abas */
   --campo: #21262c;        /* fundo dos campos de e-mail e senha */
-  --laranja: #F97316;      /* botão Entrar, aba ativa e foco */
-  --cinza-claro: #F3F4F6;  /* títulos, texto dos campos e das abas */
-}
+  --grafite: #171C22;      /* lado direito: fundo da área do formulário */
+  --laranja: #F97316;      /* botão Entrar, aba ativa e logo "3D" */
+  --cinza-claro: #F3F4F6;  /* textos principais: título, campos e aba ativa */
 }
 
 * {
@@ -19,8 +16,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: var(--cor-preto);
-  color: var(--cor-cinza-claro);
+  background: var(--preto);       /* fundo da página inteira */
+  color: var(--cinza-claro);
 }
 
 /* Layout: duas colunas no computador, uma no celular */
@@ -29,6 +26,7 @@ body {
   min-height: 100vh;
 }
 
+/* Lado esquerdo: marca Fabri3D */
 .painel-marca {
   flex: 1;
   display: flex;
@@ -36,6 +34,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 32px;
+  background: var(--preto);
 }
 
 .logo {
@@ -43,29 +42,31 @@ body {
 }
 
 .logo span {
-  color: var(--cor-laranja);
+  color: var(--laranja);          /* a parte "3D" do logo */
 }
 
 .slogan {
   margin-top: 12px;
-  color: #9CA3AF;
+  color: #9CA3AF;                 /* cinza fixo, texto de apoio */
   font-size: 18px;
 }
 
+/* Lado direito: área que contém o card */
 .painel-form {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 32px;
-  background: var(--cor-grafite);
+  background: var(--grafite);
 }
 
+/* Card de login: caixa com abas, campos e botão */
 .card {
   width: 100%;
   max-width: 475px;
-  background: var(--cor-cinza);
-  border: 1px solid #3f434b;
+  background: var(--cinza-escuro);
+  border: 1px solid #3f434b;      /* borda fixa do card */
   border-radius: 8px;
   padding: 24px;
 }
@@ -81,18 +82,18 @@ body {
   flex: 1;
   background: none;
   border: none;
-  color: #9CA3AF;
+  color: #9CA3AF;                 /* aba inativa */
   padding: 12px;
   font-size: 16px;
   cursor: pointer;
 }
 
 .aba-ativa {
-  color: var(--cor-cinza-claro);
-  border-bottom: 2px solid var(--cor-laranja);
+  color: var(--cinza-claro);      /* texto da aba ativa */
+  border-bottom: 2px solid var(--laranja); /* linha laranja embaixo */
 }
 
-/* Campos */
+/* Campos de texto (rótulos) */
 .formulario label {
   display: block;
   margin-top: 16px;
@@ -100,23 +101,24 @@ body {
   font-size: 14px;
 }
 
+/* Campos de e-mail e senha */
 .formulario input {
   width: 100%;
   padding: 12px;
-  background: var(--cor-cinza-diferente);
-  border: 1px solid #4a4f58;
+  background: var(--campo);       /* fundo dos campos */
+  border: 1px solid #4a4f58;      /* borda fixa dos campos */
   border-radius: 6px;
-  color: var(--cor-cinza-claro);
+  color: var(--cinza-claro);      /* texto digitado */
   font-size: 15px;
 }
 
-/* Botão principal */
+/* Botão Entrar */
 .botao-principal {
   width: 100%;
   margin-top: 24px;
   padding: 14px;
-  background: var(--cor-laranja);
-  color: #FFFFFF;
+  background: var(--laranja);     /* fundo laranja do botão */
+  color: #FFFFFF;                 /* texto branco fixo */
   border: none;
   border-radius: 6px;
   font-size: 16px;
@@ -124,6 +126,7 @@ body {
   cursor: pointer;
 }
 
+/* Texto dos termos, no rodapé do card */
 .rodape-card {
   margin-top: 24px;
   font-size: 12px;
@@ -131,7 +134,7 @@ body {
   color: #9CA3AF;
 }
 
-/* Celular */
+/* Celular: as duas colunas viram uma */
 @media (max-width: 768px) {
   .pagina-login {
     flex-direction: column;
