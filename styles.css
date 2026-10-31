@@ -117,11 +117,16 @@ body {
   font-size: 15px;
 }
 
-#campo-email {
-  position: relative; /* Torna este contêiner a referência para posicionar o ícone. */
+#campo-email,
+#campo-senha,
+#campo-email-cadastro,
+#campo-senha-cadastro,
+#campo-nome,
+#campo-confirmar-senha {
+  position: relative; /* Torna cada contêiner de campo a referência para o ícone. */
 }
 
-#campo-email .icone-input {
+.formulario .icone-input {
   position: absolute; /* Sobrepõe o ícone ao campo, em vez de ocupar espaço ao lado. */
   left: 12px;         /* Mantém o ícone afastado da borda esquerda do campo. */
   top: 50%;           /* Leva o ícone até a metade da altura do contêiner. */
@@ -131,25 +136,7 @@ body {
   pointer-events: none; /* Permite clicar no campo mesmo sobre a área do ícone. */
 }
 
-#campo-email input {
-  padding-left: 40px; /* Reserva espaço para o texto não ficar sobre o ícone. */
-}
-
-#campo-senha {
-  position: relative; /* Torna este contêiner a referência para posicionar o ícone. */
-}
-
-#campo-senha .icone-input {
-  position: absolute; /* Sobrepõe o ícone ao campo, em vez de ocupar espaço ao lado. */
-  left: 12px;         /* Mantém o ícone afastado da borda esquerda do campo. */
-  top: 50%;           /* Leva o ícone até a metade da altura do contêiner. */
-  transform: translateY(-50%); /* Centraliza o ícone verticalmente. */
-  width: 18px;
-  height: 18px;
-  pointer-events: none; /* Permite clicar no campo mesmo sobre a área do ícone. */
-}
-
-#campo-senha input {
+.formulario > div input {
   padding-left: 40px; /* Reserva espaço para o texto não ficar sobre o ícone. */
 }
 
