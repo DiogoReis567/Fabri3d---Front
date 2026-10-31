@@ -48,7 +48,7 @@ body {
 .slogan {
   margin-top: 12px;
   color: #9CA3AF;                 /* cinza fixo, texto de apoio */
-  font-size: 18px;
+  font-size:20px;
 }
 
 /* Lado direito: área que contém o card */
@@ -59,6 +59,11 @@ body {
   justify-content: center;
   padding: 32px;
   background: var(--grafite);
+}
+
+.logo {
+  width: 100%;
+  max-width: 400px;
 }
 
 /* Card de login: caixa com abas, campos e botão */
