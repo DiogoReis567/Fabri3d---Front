@@ -1,11 +1,14 @@
 /* Cores da paleta do Fabri3D */
 :root {
-  --cor-preto: #12151A;
-  --cor-cinza: #1C2127;
-  --cor-cinza-diferente: #21262c;
-  --cor-grafite: #171C22;
-  --cor-laranja: #F97316;
-  --cor-cinza-claro: #F3F4F6;
+  :root {
+  --preto: #12151A;        /* lado esquerdo: fundo da marca Fabri3D */
+  --grafite: #171C22;      /* lado direito: fundo da área do formulário */
+  --cinza-escuro: #1C2127; /* o card de login (caixa com abas e campos) */
+  --cinza-medio: #21262c;  /* bordas do card e divisórias das abas */
+  --campo: #21262c;        /* fundo dos campos de e-mail e senha */
+  --laranja: #F97316;      /* botão Entrar, aba ativa e foco */
+  --cinza-claro: #F3F4F6;  /* títulos, texto dos campos e das abas */
+}
 }
 
 * {
