@@ -107,6 +107,15 @@ body {
   font-size: 14px;
 }
 
+.link-esqueci-senha {
+  text-align: left;
+  margin-top: 8px;
+  margin-left: 2px;
+  font-size: 14px;
+  color: #9CA3AF;                 /* cinza fixo */
+  text-decoration: none;
+}
+
 /* Campos de e-mail e senha */
 .formulario input {
   width: 100%;
