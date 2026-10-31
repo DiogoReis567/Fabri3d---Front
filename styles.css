@@ -74,6 +74,7 @@ body {
   border: 1px solid #3f434b;      /* borda fixa do card */
   border-radius: 8px;
   padding: 24px;
+  
 }
 
 /* Abas Login e Cadastrar */
@@ -101,7 +102,7 @@ body {
 /* Campos de texto (rótulos) */
 .formulario label {
   display: block;
-  margin-top: 16px;
+  margin-top: 8px;
   margin-bottom: 6px;
   font-size: 14px;
 }
