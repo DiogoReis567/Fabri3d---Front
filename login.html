@@ -22,6 +22,7 @@
           <button class="aba" id="cadastrar">Cadastrar</button>
         </nav>
 
+<!-- Login -->
         <form class="formulario" id="formulario-login">
           <label for="email">E-mail</label>
           <div id="campo-email">
@@ -40,32 +41,58 @@
           <button type="submit" class="botao-principal">Entrar</button>
         </form>
 
+<!-- Cadastro -->
         <form class="formulario" id="formulario-cadastro" hidden>
           <label for="nome">Nome</label>
-          <div id="campo-nome">
+          <div id="campo-nome" class="campo-nome">
             <img src="assets/icons/usuario.svg" alt="" class="icone-input">
-            <input id="nome" type="name" placeholder="Digite seu nome completo">
+            <input id="nome" type="name" placeholder="Digite seu nome">
           </div>
 
-          <label for="email-cadastro">E-mail</label>
+          <label for="Sobrenome">Sobrenome</label>
+          <div id="campo-sobrenome" class="campo-nome">
+            <img src="assets/icons/usuario.svg" alt="" class="icone-input">
+            <input id="nome" type="name" placeholder="Digite seu sobrenome">
+          </div>
+
+
+         <!-- <label for="email-cadastro">E-mail</label>
           <div id="campo-email-cadastro">
             <img src="assets/icons/email.svg" alt="" class="icone-input">
             <input id="email-cadastro" type="email" placeholder="seu@email.com">
-          </div>
+          </div> -->
 
-          <label for="senha-cadastro">Senha</label>
+         <!-- <label for="senha-cadastro">Senha</label>
           <div id="campo-senha-cadastro">
             <img src="assets/icons/senha.svg" alt="" class="icone-input">
             <input id="senha-cadastro" type="password" placeholder="Digite sua senha">
-          </div>
+          </div> -->
           
-          <label for="confirmar-senha">Confirmar Senha</label>
+<!--          <label for="confirmar-senha">Confirmar Senha</label>
           <div id="campo-confirmar-senha">
             <img src="assets/icons/senha.svg" alt="" class="icone-input">
             <input id="confirmar-senha" type="password" placeholder="Confirme sua senha">
+          </div> -->
+         
+        
+          <div id="botoes-navegacao">
+            <div id="voltar-cadastro" >
+              <button type="button" class="botao-ir-vir" id="botao-voltar">
+                <img src="assets/icons/seta-esquerda.svg" alt="" id="seta-voltar">
+                Voltar
+              </button>
+            </div>
+            <div id="proximo-cadastro">
+              <button type="button" class="botao-ir-vir" id="botao-proximo">
+                Próximo
+                <img src="assets/icons/seta-direita.svg" alt="" id="seta-proximo">
+              </button>
+            </div>
           </div>
+          
 
-          <button type="submit" class="botao-principal">Cadastrar</button>
+<!--          <button type="submit" class="botao-principal" hidden>Cadastrar</button> -->
+
         </form>
 
 

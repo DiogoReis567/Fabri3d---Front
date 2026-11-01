@@ -132,8 +132,10 @@ body {
 #campo-email-cadastro,
 #campo-senha-cadastro,
 #campo-nome,
+#campo-sobrenome,
 #campo-confirmar-senha {
   position: relative; /* Torna cada contêiner de campo a referência para o ícone. */
+  margin-top: 6px;
 }
 
 .formulario .icone-input {
@@ -170,6 +172,58 @@ body {
   font-size: 12px;
   text-align: center;
   color: #9CA3AF;
+}
+
+.botao-ir-vir {
+  position: relative;
+  width: 100%;
+  padding: 14px;      /* fundo laranja do botão */
+  color: #FFFFFF;   /* texto branco fix*/
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  height: 50px;
+}
+
+#seta-voltar,
+#seta-proximo {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 25px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+#seta-voltar {
+  left: 12px;
+}
+
+#seta-proximo {
+  right: 12px;
+}
+
+#botao-voltar{
+  background: var(--cinza-escuro);
+  border: solid 2px #3f434b;
+}
+
+#botao-proximo{
+  background: var(--laranja);
+  border: none;  
+}
+
+#botoes-navegacao{
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+#voltar-cadastro,
+#proximo-cadastro {
+  flex: 1;
+  min-width: 0;
 }
 
 /* Celular: as duas colunas viram uma */

@@ -1,6 +1,7 @@
 const botaoCadastrar = document.getElementById("cadastrar");
 const botaoLogin = document.getElementById("login");
 
+
 function mostrarFormularioCadastro() {
     document.getElementById("formulario-cadastro").hidden = false;
     document.getElementById("formulario-login").hidden = true;
@@ -16,6 +17,8 @@ function mostrarFormularioLogin() {
     document.getElementById("login").classList.add("aba-ativa");
     document.title = "Fabri3D - Login";
 }
+
+
 
 botaoCadastrar.addEventListener("click", mostrarFormularioCadastro);
 botaoLogin.addEventListener("click", mostrarFormularioLogin);   
