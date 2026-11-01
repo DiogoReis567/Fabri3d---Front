@@ -226,6 +226,30 @@ body {
   min-width: 0;
 }
 
+#codigo-container{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 16px;
+}
+
+#codigo-container .codigo-input {
+  flex: 1 1 48px;
+  min-width: 0;
+  max-width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 8px;
+  font-size: 24px;
+  text-align: center;
+  border: solid 1px var(--laranja);
+  outline: var(--laranja);
+}
+
+
 /* Celular: as duas colunas viram uma */
 @media (max-width: 768px) {
   .pagina-login {

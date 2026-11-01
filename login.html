@@ -1,105 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fabri3D - Login</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="shortcut icon" href="assets/favicon/favicon.png" type="image/png">
-  <script src="login.js" defer></script>
-</head>
-<body>
-  <main class="pagina-login">
-    <section class="painel-marca">
-      <img src="assets/logo.png" alt="Logo da Fabri3D" class="logo">
-      <p class="slogan">Da solicitação à fabricação</p>
-    </section>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabri3D - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/favicon/favicon.png" type="image/png">
+    <script src="login.js" defer></script>
+  </head>
+  <body>
+    <main class="pagina-login">
+      <section class="painel-marca">
+        <img src="assets/logo.png" alt="Logo da Fabri3D" class="logo">
+        <p class="slogan">Da solicitação à fabricação</p>
+      </section>
 
-    <section class="painel-form">
-      <div class="card">
-        <nav class="abas">
-          <button class="aba aba-ativa" id="login">Login</button>
-          <button class="aba" id="cadastrar">Cadastrar</button>
-        </nav>
+      <section class="painel-form">
+        <div class="card">
+          <nav class="abas">
+            <button class="aba aba-ativa" id="login">Login</button>
+            <button class="aba" id="cadastrar">Cadastrar</button>
+          </nav>
 
-<!-- Login -->
-        <form class="formulario" id="formulario-login">
-          <label for="email">E-mail</label>
-          <div id="campo-email">
-            <img src="assets/icons/email.svg" alt="" class="icone-input">
-            <input id="email" type="email" placeholder="seu@email.com">
-          </div>
+          <!-- Login -->
+          <form class="formulario" id="formulario-login">
+            <label for="email">E-mail</label>
+            <div id="campo-email">
+              <img src="assets/icons/email.svg" alt="" class="icone-input">
+              <input id="email" type="email" placeholder="seu@email.com">
+            </div>
 
-          <label for="senha">Senha</label>
-          <div id="campo-senha">
-            <img src="assets/icons/senha.svg" alt="" class="icone-input">
-            <input id="senha" type="password" placeholder="Digite sua senha">
-          </div>
+            <label for="senha">Senha</label>
+            <div id="campo-senha">
+              <img src="assets/icons/senha.svg" alt="" class="icone-input">
+              <input id="senha" type="password" placeholder="Digite sua senha">
+            </div>
+
             <div id="esquevi-minha-senha">
-                <p class="link-esqueci-senha"><a href="#" class="link-esqueci-senha">Esqueci minha senha</a></p>
+              <p class="link-esqueci-senha"><a href="#" class="link-esqueci-senha">Esqueci minha senha</a></p>
             </div>
-          <button type="submit" class="botao-principal">Entrar</button>
-        </form>
 
-<!-- Cadastro -->
-        <form class="formulario" id="formulario-cadastro" hidden>
-          <label for="nome">Nome</label>
-          <div id="campo-nome" class="campo-nome">
-            <img src="assets/icons/usuario.svg" alt="" class="icone-input">
-            <input id="nome" type="name" placeholder="Digite seu nome">
-          </div>
+            <button type="submit" class="botao-principal">Entrar</button>
+          </form>
 
-          <label for="Sobrenome">Sobrenome</label>
-          <div id="campo-sobrenome" class="campo-nome">
-            <img src="assets/icons/usuario.svg" alt="" class="icone-input">
-            <input id="nome" type="name" placeholder="Digite seu sobrenome">
-          </div>
-
-
-         <!-- <label for="email-cadastro">E-mail</label>
-          <div id="campo-email-cadastro">
-            <img src="assets/icons/email.svg" alt="" class="icone-input">
-            <input id="email-cadastro" type="email" placeholder="seu@email.com">
-          </div> -->
-
-         <!-- <label for="senha-cadastro">Senha</label>
-          <div id="campo-senha-cadastro">
-            <img src="assets/icons/senha.svg" alt="" class="icone-input">
-            <input id="senha-cadastro" type="password" placeholder="Digite sua senha">
-          </div> -->
-          
-<!--          <label for="confirmar-senha">Confirmar Senha</label>
-          <div id="campo-confirmar-senha">
-            <img src="assets/icons/senha.svg" alt="" class="icone-input">
-            <input id="confirmar-senha" type="password" placeholder="Confirme sua senha">
-          </div> -->
-         
-        
-          <div id="botoes-navegacao">
-            <div id="voltar-cadastro" >
-              <button type="button" class="botao-ir-vir" id="botao-voltar">
-                <img src="assets/icons/seta-esquerda.svg" alt="" id="seta-voltar">
-                Voltar
-              </button>
+          <!-- Cadastro -->
+          <form class="formulario" id="formulario-cadastro" hidden>
+            <label for="nome">Nome</label>
+            <div id="campo-nome" class="campo-nome">
+              <img src="assets/icons/usuario.svg" alt="" class="icone-input">
+              <input id="nome" type="name" placeholder="Digite seu nome">
             </div>
-            <div id="proximo-cadastro">
-              <button type="button" class="botao-ir-vir" id="botao-proximo">
-                Próximo
-                <img src="assets/icons/seta-direita.svg" alt="" id="seta-proximo">
-              </button>
+
+            <label for="Sobrenome">Sobrenome</label>
+            <div id="campo-sobrenome" class="campo-nome">
+              <img src="assets/icons/usuario.svg" alt="" class="icone-input">
+              <input id="nome" type="name" placeholder="Digite seu sobrenome">
             </div>
-          </div>
-          
 
-<!--          <button type="submit" class="botao-principal" hidden>Cadastrar</button> -->
+            <label for="email-cadastro">E-mail</label>
+            <div id="campo-email-cadastro">
+              <img src="assets/icons/email.svg" alt="" class="icone-input">
+              <input id="email-cadastro" type="email" placeholder="seu@email.com">
+            </div>
 
-        </form>
+            <div id="campo-confirmar-email">
+              <h3>Digite o código enviado para seuemail@exemplo.com</h3>
+              <div id="codigo-container">
+                <input type="text" class="codigo-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+                <input type="text" class="codigo-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+                <input type="text" class="codigo-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+                <input type="text" class="codigo-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+                <input type="text" class="codigo-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
+              </div>
+            </div>
 
+            <label for="senha-cadastro" hidden>Senha</label>
+            <div id="campo-senha-cadastro" hidden>
+              <img src="assets/icons/senha.svg" alt="" class="icone-input">
+              <input id="senha-cadastro" type="password" placeholder="Digite sua senha">
+            </div>
 
+            <label for="confirmar-senha">Confirmar Senha</label hidden>
+            <div id="campo-confirmar-senha" hidden>
+              <img src="assets/icons/senha.svg" alt="" class="icone-input">
+              <input id="confirmar-senha" type="password" placeholder="Confirme sua senha">
+            </div>
 
-        <p class="rodape-card">Ao continuar, você concorda com os termos de uso e a política de privacidade do Fabri3D.</p>
-      </div>
-    </section>
-  </main>
-</body>
+            <div id="botoes-navegacao" hidden>
+              <div id="voltar-cadastro">
+                <button type="button" class="botao-ir-vir" id="botao-voltar">
+                  <img src="assets/icons/seta-esquerda.svg" alt="" id="seta-voltar">
+                  Voltar
+                </button>
+              </div>
+              <div id="proximo-cadastro">
+                <button type="button" class="botao-ir-vir" id="botao-proximo">
+                  Próximo
+                  <img src="assets/icons/seta-direita.svg" alt="" id="seta-proximo">
+                </button>
+              </div>
+            </div>
+
+            <button type="submit" class="botao-principal" hidden>Cadastrar</button>
+          </form>
+
+          <p class="rodape-card">Ao continuar, você concorda com os termos de uso e a política de privacidade do Fabri3D.</p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
