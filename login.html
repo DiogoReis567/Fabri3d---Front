@@ -45,25 +45,25 @@
 
           <!-- Cadastro -->
           <form class="formulario" id="formulario-cadastro" hidden>
-            <label for="nome">Nome</label>
-            <div id="campo-nome" class="campo-nome">
+            <label for="nome" hidden>Nome</label>
+            <div id="campo-nome" class="campo-nome" hidden>
               <img src="assets/icons/usuario.svg" alt="" class="icone-input">
               <input id="nome" type="name" placeholder="Digite seu nome">
             </div>
 
-            <label for="Sobrenome">Sobrenome</label>
-            <div id="campo-sobrenome" class="campo-nome">
+            <label for="Sobrenome" hidden>Sobrenome</label>
+            <div id="campo-sobrenome" class="campo-nome" hidden>
               <img src="assets/icons/usuario.svg" alt="" class="icone-input">
-              <input id="nome" type="name" placeholder="Digite seu sobrenome">
+              <input id="sobrenome" type="name" placeholder="Digite seu sobrenome">
             </div>
 
-            <label for="email-cadastro">E-mail</label>
-            <div id="campo-email-cadastro">
+            <label for="email-cadastro" hidden>E-mail</label>
+            <div id="campo-email-cadastro" hidden>
               <img src="assets/icons/email.svg" alt="" class="icone-input">
               <input id="email-cadastro" type="email" placeholder="seu@email.com">
             </div>
 
-            <div id="campo-confirmar-email">
+            <div id="campo-confirmar-email" hidden>
               <h3>Digite o código enviado para seuemail@exemplo.com</h3>
               <div id="codigo-container">
                 <input type="text" class="codigo-input" maxlength="1" inputmode="numeric" pattern="[0-9]">
@@ -80,15 +80,15 @@
               <input id="senha-cadastro" type="password" placeholder="Digite sua senha">
             </div>
 
-            <label for="confirmar-senha">Confirmar Senha</label hidden>
+            <label for="confirmar-senha" hidden>Confirmar Senha</label>
             <div id="campo-confirmar-senha" hidden>
               <img src="assets/icons/senha.svg" alt="" class="icone-input">
               <input id="confirmar-senha" type="password" placeholder="Confirme sua senha">
             </div>
 
-            <div id="botoes-navegacao" hidden>
+            <div id="botoes-navegacao">
               <div id="voltar-cadastro">
-                <button type="button" class="botao-ir-vir" id="botao-voltar">
+                <button type="button" class="botao-ir-vir" id="botao-voltar" hidden>
                   <img src="assets/icons/seta-esquerda.svg" alt="" id="seta-voltar">
                   Voltar
                 </button>
@@ -101,8 +101,8 @@
               </div>
             </div>
 
-            <button type="submit" class="botao-principal" hidden>Cadastrar</button>
-          </form>
+            <button type="submit" class="botao-principal" id="confirmar_cadastrar" hidden>Cadastrar</button>
+          </form> 
 
           <p class="rodape-card">Ao continuar, você concorda com os termos de uso e a política de privacidade do Fabri3D.</p>
         </div>

@@ -107,6 +107,10 @@ body {
   font-size: 14px;
 }
 
+.formulario label[hidden] {
+  display: none;
+}
+
 .link-esqueci-senha {
   text-align: left;
   margin-top: 8px;
