@@ -129,6 +129,8 @@ body {
   border-radius: 6px;
   color: var(--cinza-claro);      /* texto digitado */
   font-size: 15px;
+  border: solid 1px var(--laranja); /* borda laranja quando o campo está ativo */
+  outline: var(--laranja);
 }
 
 #campo-email,
@@ -159,7 +161,7 @@ body {
 /* Botão Entrar */
 .botao-principal {
   width: 100%;
-  margin-top: 24px;
+  margin-top: 10px;
   padding: 14px;
   background: var(--laranja);     /* fundo laranja do botão */
   color: #FFFFFF;                 /* texto branco fixo */
@@ -168,6 +170,8 @@ body {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  flex: 1;
+  min-width: 0;
 }
 
 /* Texto dos termos, no rodapé do card */
@@ -251,6 +255,11 @@ body {
   text-align: center;
   border: solid 1px var(--laranja);
   outline: var(--laranja);
+}
+
+#confirmar_cadastrar {
+  height: 50px;
+  margin-top: 0;
 }
 
 

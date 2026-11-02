@@ -3,6 +3,8 @@ const botaoLogin = document.getElementById("login");
 const botaoVoltar = document.getElementById("botao-voltar");
 const botaoProximo = document.getElementById("botao-proximo");
 const botao_Confirmar_Cadastro = document.getElementById("confirmar_cadastrar");
+const ocultarContainer_Botao_Voltar = document.getElementById("voltar-cadastro");
+const ocultarContainer_Botao_Proximo = document.getElementById("proximo-cadastro");
 
 const statusNomeUsuario = document.getElementById("campo-nome");
 const statusSobrenome = document.getElementById("campo-sobrenome");
@@ -10,6 +12,7 @@ const statusEmail = document.getElementById("campo-email-cadastro");
 const statusConfirmarEmail = document.getElementById("campo-confirmar-email");
 const statusSenha = document.getElementById("campo-senha-cadastro");
 const statusConfirmarSenha = document.getElementById("campo-confirmar-senha");
+
 const labelNome = document.querySelector('#formulario-cadastro label[for="nome"]');
 const labelSobrenome = document.querySelector('#formulario-cadastro label[for="Sobrenome"]');
 const labelEmail = document.querySelector('#formulario-cadastro label[for="email-cadastro"]');
@@ -32,18 +35,24 @@ function atualizarCadastro() {
         botaoVoltar.hidden = true;
         botaoProximo.hidden = false;
         botao_Confirmar_Cadastro.hidden = true;
+        ocultarContainer_Botao_Voltar.hidden = true;
+        ocultarContainer_Botao_Proximo.hidden = false;
     }
 
     else if (etapaAtual === 1 || etapaAtual === 2) {
         botaoVoltar.hidden = false;
         botaoProximo.hidden = false;
         botao_Confirmar_Cadastro.hidden = true;
+        ocultarContainer_Botao_Voltar.hidden = false;
+        ocultarContainer_Botao_Proximo.hidden = false;
     }
 
     else {
         botaoVoltar.hidden = false;
         botaoProximo.hidden = true;
         botao_Confirmar_Cadastro.hidden = false;
+        ocultarContainer_Botao_Voltar.hidden = false;
+        ocultarContainer_Botao_Proximo.hidden = true;
     }
 
     if (etapaAtual === 0) {
