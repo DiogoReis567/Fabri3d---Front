@@ -129,8 +129,6 @@ body {
   border-radius: 6px;
   color: var(--cinza-claro);      /* texto digitado */
   font-size: 15px;
-  border: solid 1px var(--laranja); /* borda laranja quando o campo está ativo */
-  outline: var(--laranja);
 }
 
 #campo-email,
@@ -176,7 +174,7 @@ body {
 
 /* Texto dos termos, no rodapé do card */
 .rodape-card {
-  margin-top: 24px;
+  margin-top: 12px;
   font-size: 12px;
   text-align: center;
   color: #9CA3AF;
@@ -261,6 +259,29 @@ body {
   height: 50px;
   margin-top: 0;
 }
+
+#separador,
+#separador-cadastro:not([hidden]) {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.linha-separadora {
+  flex: 1;
+  height: 1px;
+  background-color: #3f434b; /* cor da linha */
+  border: none;
+
+}
+
+#mensagem-separadora {
+  margin: 0 10px; /* espaço entre as linhas e o texto */
+  color: #9CA3AF; /* cor do texto */
+  font-size: 14px;
+  text-align: center;
+}
+
 
 
 /* Celular: as duas colunas viram uma */

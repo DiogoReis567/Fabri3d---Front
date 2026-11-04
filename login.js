@@ -22,6 +22,8 @@ const foco_Campo_Email = document.getElementById("email-cadastro");
 const foco_Campo_CodigoConfirmacao = document.querySelector(".codigo-input");
 const foco_Campo_Senha = document.getElementById("senha-cadastro");
 
+const visibilidade_Ou_Cadastrar = document.getElementById("separador-cadastro");
+
 const labelNome = document.querySelector(
   '#formulario-cadastro label[for="nome"]',
 );
@@ -59,18 +61,24 @@ function atualizarCadastro() {
     botao_Confirmar_Cadastro.hidden = true;
     ocultarContainer_Botao_Voltar.hidden = true;
     ocultarContainer_Botao_Proximo.hidden = false;
+    visibilidade_Ou_Cadastrar.hidden = false;
+
   } else if (etapaAtual === 1 || etapaAtual === 2) {
     botaoVoltar.hidden = false;
     botaoProximo.hidden = false;
     botao_Confirmar_Cadastro.hidden = true;
     ocultarContainer_Botao_Voltar.hidden = false;
     ocultarContainer_Botao_Proximo.hidden = false;
+    visibilidade_Ou_Cadastrar.hidden = true;
+
   } else {
     botaoVoltar.hidden = false;
     botaoProximo.hidden = true;
     botao_Confirmar_Cadastro.hidden = false;
     ocultarContainer_Botao_Voltar.hidden = false;
     ocultarContainer_Botao_Proximo.hidden = true;
+    visibilidade_Ou_Cadastrar.hidden = true;
+    
   }
 
   if (etapaAtual === 0) {
