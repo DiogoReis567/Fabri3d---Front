@@ -207,7 +207,7 @@ body {
 .botao-principal {
   width: 100%;
   margin-top: 10px;
-  padding: 14px;
+  height: 40px;
   background: var(--laranja);     /* fundo laranja do botão */
   color: #FFFFFF;                 /* texto branco fixo */
   border: none;
@@ -312,6 +312,7 @@ body {
   display: flex;
   align-items: center;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .linha-separadora {
