@@ -6,7 +6,10 @@ const botao_Confirmar_Cadastro = document.getElementById("confirmar_cadastrar");
 const ocultarContainer_Botao_Voltar = document.getElementById("voltar-cadastro");
 const ocultarContainer_Botao_Proximo = document.getElementById("proximo-cadastro");
 
-const ocultarBotao_Google = document.getElementById("botao-google-cadastrar");
+const botaoGoogleCadastro = document.getElementById("botao-google-cadastrar");
+
+const barraEtapas = document.getElementById("etapas");
+const itensEtapas = document.querySelectorAll(".etapa");
 
 const statusNomeUsuario = document.getElementById("campo-nome");
 const statusSobrenome = document.getElementById("campo-sobrenome");
@@ -26,21 +29,11 @@ const foco_Campo_Senha = document.getElementById("senha-cadastro");
 
 const visibilidade_Ou_Cadastrar = document.getElementById("separador-cadastro");
 
-const labelNome = document.querySelector(
-  '#formulario-cadastro label[for="nome"]',
-);
-const labelSobrenome = document.querySelector(
-  '#formulario-cadastro label[for="sobrenome"]',
-);
-const labelEmail = document.querySelector(
-  '#formulario-cadastro label[for="email-cadastro"]',
-);
-const labelSenha = document.querySelector(
-    '#formulario-cadastro label[for="senha-cadastro"]',
-);
-const labelConfirmarSenha = document.querySelector(
-  '#formulario-cadastro label[for="confirmar-senha"]',
-);
+const labelNome = document.querySelector('#formulario-cadastro label[for="nome"]');
+const labelSobrenome = document.querySelector('#formulario-cadastro label[for="sobrenome"]');
+const labelEmail = document.querySelector('#formulario-cadastro label[for="email-cadastro"]');
+const labelSenha = document.querySelector('#formulario-cadastro label[for="senha-cadastro"]');
+const labelConfirmarSenha = document.querySelector('#formulario-cadastro label[for="confirmar-senha"]');
 
 const camposCodigo = document.querySelectorAll(".codigo-input");
 
@@ -54,9 +47,24 @@ let abaAtualCadastro = [
 let etapaAtual = 0;
 let ultimaEtapa = abaAtualCadastro.length - 1;
 
+barraEtapas.hidden = true;
 foco_Campo_Email_Login.focus();
 
+function atualizarBarraEtapas() {
+  itensEtapas.forEach((item, indice) => {
+    item.classList.remove("concluida", "atual");
+
+    if (indice < etapaAtual) {
+      item.classList.add("concluida");
+    } else if (indice === etapaAtual) {
+      item.classList.add("atual");
+    }
+  });
+}
+
 function atualizarCadastro() {
+  atualizarBarraEtapas();
+
   if (etapaAtual === 0) {
     botaoVoltar.hidden = true;
     botaoProximo.hidden = false;
@@ -64,8 +72,7 @@ function atualizarCadastro() {
     ocultarContainer_Botao_Voltar.hidden = true;
     ocultarContainer_Botao_Proximo.hidden = false;
     visibilidade_Ou_Cadastrar.hidden = false;
-    ocultarBotao_Google.hidden = false;
-
+    botaoGoogleCadastro.hidden = false;
   } else if (etapaAtual === 1 || etapaAtual === 2) {
     botaoVoltar.hidden = false;
     botaoProximo.hidden = false;
@@ -73,8 +80,7 @@ function atualizarCadastro() {
     ocultarContainer_Botao_Voltar.hidden = false;
     ocultarContainer_Botao_Proximo.hidden = false;
     visibilidade_Ou_Cadastrar.hidden = true;
-    ocultarBotao_Google.hidden = true;
-
+    botaoGoogleCadastro.hidden = true;
   } else {
     botaoVoltar.hidden = false;
     botaoProximo.hidden = true;
@@ -82,8 +88,7 @@ function atualizarCadastro() {
     ocultarContainer_Botao_Voltar.hidden = false;
     ocultarContainer_Botao_Proximo.hidden = true;
     visibilidade_Ou_Cadastrar.hidden = true;
-    ocultarBotao_Google.hidden = true;
-
+    botaoGoogleCadastro.hidden = true;
   }
 
   if (etapaAtual === 0) {
@@ -166,6 +171,7 @@ function mostrarFormularioLogin() {
   document.getElementById("formulario-login").hidden = false;
   document.getElementById("cadastrar").classList.remove("aba-ativa");
   document.getElementById("login").classList.add("aba-ativa");
+  barraEtapas.hidden = true;
   document.title = "Fabri3D - Login";
 
   foco_Campo_Email_Login.focus();
@@ -176,6 +182,7 @@ function mostrarFormularioCadastro() {
   document.getElementById("formulario-login").hidden = true;
   document.getElementById("login").classList.remove("aba-ativa");
   document.getElementById("cadastrar").classList.add("aba-ativa");
+  barraEtapas.hidden = false;
   document.title = "Fabri3D - Cadastro";
 
   foco_Campo_Nome.focus();
@@ -187,8 +194,6 @@ botaoProximo.addEventListener("click", proximaEtapa);
 botaoVoltar.addEventListener("click", etapaAnterior);
 
 atualizarCadastro();
-
-
 
 camposCodigo.forEach((campo, indice) => {
   campo.addEventListener("input", () => {
@@ -202,11 +207,7 @@ camposCodigo.forEach((campo, indice) => {
   campo.addEventListener("keydown", (evento) => {
     const campoAnterior = camposCodigo[indice - 1];
 
-    if (
-      evento.key === "Backspace" &&
-      campo.value === "" &&
-      campoAnterior
-    ) {
+    if (evento.key === "Backspace" && campo.value === "" && campoAnterior) {
       campoAnterior.focus();
     }
   });

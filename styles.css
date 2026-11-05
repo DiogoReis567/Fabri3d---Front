@@ -48,7 +48,7 @@ body {
 .slogan {
   margin-top: 12px;
   color: #9CA3AF;                 /* cinza fixo, texto de apoio */
-  font-size:20px;
+  font-size: 20px;
 }
 
 /* Lado direito: área que contém o card */
@@ -74,7 +74,6 @@ body {
   border: 1px solid #3f434b;      /* borda fixa do card */
   border-radius: 8px;
   padding: 24px;
-  
 }
 
 /* Abas Login e Cadastrar */
@@ -112,59 +111,53 @@ body {
 }
 
 /* Mantém os dois elementos nas extremidades */
-
-/*Estudar código abaixo*/
-
 .container-opcoes-login {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    gap: 12px;
-    margin-top: 16px;
-    margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+  margin-top: 16px;
+  margin-bottom: 6px;
 }
 
 /* Checkbox à esquerda */
 .caixa-lembre-de-mim {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
 }
 
 /* Aparência do checkbox */
 .formulario input[type="checkbox"] {
-    width: 17px;
-    height: 17px;
-    margin: 0;
-    padding: 0;
-    accent-color: var(--laranja);
-    cursor: pointer;
-    flex: 0 0 17px;
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--laranja);
+  cursor: pointer;
+  flex: 0 0 17px;
 }
 
 /* Texto do checkbox */
 .caixa-lembre-de-mim label {
-    display: inline;
-    margin: 0;
-    padding: 0;
-    color: #D1D5DB;
-    font-size: 14px;
-    cursor: pointer;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  color: #D1D5DB;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-/*Entender código acima
-
-
-/* Link à direita — preserva sua aparência */
+/* Link à direita */
 .link-esqueci-senha {
-    text-align: right;
-    font-size: 14px;
-    color: #9CA3AF;
-    text-decoration: none;
-    white-space: nowrap;
-    margin: 0;
+  text-align: right;
+  font-size: 14px;
+  color: #9CA3AF;
+  text-decoration: none;
+  white-space: nowrap;
+  margin: 0;
 }
 
 /* Campos de e-mail e senha */
@@ -219,24 +212,25 @@ body {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-} 
+}
 
+/* Botão Cadastrar */
 .botao-principal-cadastrar {
+  display: block;
   width: 400px;
-  margin-top: 10px;
+  max-width: 100%;
   height: 40px;
-  background: var(--laranja);     /* fundo laranja do botão */
-  color:#FFFFFF;                 /* texto branco fixo */
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--laranja);
+  color: #FFFFFF;
   border: none;
   border-radius: 6px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  flex: 1;
-  min-width: 0;
-} 
-
-  
+}
 
 /* Texto dos termos, no rodapé do card */
 .rodape-card {
@@ -250,7 +244,7 @@ body {
   position: relative;
   width: 100%;
   padding: 14px;      /* fundo laranja do botão */
-  color: #FFFFFF;   /* texto branco fix*/
+  color: #FFFFFF;     /* texto branco fixo */
   border-radius: 6px;
   font-size: 16px;
   font-weight: bold;
@@ -276,17 +270,17 @@ body {
   right: 12px;
 }
 
-#botao-voltar{
+#botao-voltar {
   background: var(--cinza-escuro);
   border: solid 2px #3f434b;
 }
 
-#botao-proximo{
+#botao-proximo {
   background: var(--laranja);
-  border: none;  
+  border: none;
 }
 
-#botoes-navegacao{
+#botoes-navegacao {
   display: flex;
   gap: 16px;
   margin-top: 24px;
@@ -298,7 +292,7 @@ body {
   min-width: 0;
 }
 
-#codigo-container{
+#codigo-container {
   width: 100%;
   height: 60px;
   display: flex;
@@ -321,11 +315,6 @@ body {
   outline: var(--laranja);
 }
 
-#confirmar_cadastrar {
-  height: 50px;
-  margin-top: 0;
-}
-
 #separador,
 #separador-cadastro:not([hidden]) {
   display: flex;
@@ -337,19 +326,111 @@ body {
 .linha-separadora {
   flex: 1;
   height: 1px;
-  background-color: #3f434b; /* cor da linha */
+  background-color: #3f434b;      /* cor da linha */
   border: none;
-
 }
 
 #mensagem-separadora {
-  margin: 0 10px; /* espaço entre as linhas e o texto */
-  color: #9CA3AF; /* cor do texto */
+  margin: 0 10px;                 /* espaço entre as linhas e o texto */
+  color: #9CA3AF;                 /* cor do texto */
   font-size: 14px;
   text-align: center;
 }
 
+/* Botão do Google some quando estiver com hidden */
+.gsi-material-button[hidden] {
+  display: none;
+}
 
+/* Barra de etapas do cadastro */
+#etapas {
+  margin-bottom: 24px;
+}
+
+#lista-progresso {
+  list-style: none;
+  display: flex;
+}
+
+.etapa {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #9CA3AF;
+}
+
+/* Linha que liga uma bolinha à próxima */
+.etapa::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: calc(50% + 22px);
+  right: calc(-50% + 22px);
+  height: 2px;
+  background-color: #3f434b;
+}
+
+.etapa:last-child::after {
+  display: none;
+}
+
+/* Bolinha com número */
+.circulo {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #4a4f58;
+  border-radius: 50%;
+  background-color: var(--cinza-escuro);
+  position: relative;
+  z-index: 1;
+}
+
+.etapa > span + span {
+  text-align: center;
+}
+
+/* Etapa atual: só a borda e o número em laranja */
+.etapa.atual .circulo {
+  border-color: #F97316;
+  color: #F97316;
+}
+
+.etapa.atual {
+  color: var(--cinza-claro);
+}
+
+/* Etapas concluídas: bolinha toda laranja */
+.etapa.concluida .circulo {
+  background-color: #F97316;
+  border-color: #F97316;
+  color: #FFFFFF;
+}
+
+.etapa.concluida {
+  color: #F97316;
+}
+
+.etapa.concluida::after {
+  background-color: #F97316;
+}
+
+.botao-principal-cadastrar[hidden] {
+  display: none;
+}
+
+#confirmar_cadastrar {
+  flex: 1;
+  width: auto;
+  max-width: none;
+  height: 50px;
+  margin-top: 0;
+}
 
 /* Celular: as duas colunas viram uma */
 @media (max-width: 768px) {
@@ -360,4 +441,8 @@ body {
   .logo {
     font-size: 40px;
   }
-}
+
+  .etapa {
+    font-size: 13px;
+  }
+} 
