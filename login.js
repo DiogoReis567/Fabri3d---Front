@@ -6,6 +6,8 @@ const botao_Confirmar_Cadastro = document.getElementById("confirmar_cadastrar");
 const ocultarContainer_Botao_Voltar = document.getElementById("voltar-cadastro");
 const ocultarContainer_Botao_Proximo = document.getElementById("proximo-cadastro");
 
+const ocultarBotao_Google = document.getElementById("botao-google-cadastrar");
+
 const statusNomeUsuario = document.getElementById("campo-nome");
 const statusSobrenome = document.getElementById("campo-sobrenome");
 const statusEmail = document.getElementById("campo-email-cadastro");
@@ -62,6 +64,7 @@ function atualizarCadastro() {
     ocultarContainer_Botao_Voltar.hidden = true;
     ocultarContainer_Botao_Proximo.hidden = false;
     visibilidade_Ou_Cadastrar.hidden = false;
+    ocultarBotao_Google.hidden = false;
 
   } else if (etapaAtual === 1 || etapaAtual === 2) {
     botaoVoltar.hidden = false;
@@ -70,6 +73,7 @@ function atualizarCadastro() {
     ocultarContainer_Botao_Voltar.hidden = false;
     ocultarContainer_Botao_Proximo.hidden = false;
     visibilidade_Ou_Cadastrar.hidden = true;
+    ocultarBotao_Google.hidden = true;
 
   } else {
     botaoVoltar.hidden = false;
@@ -78,7 +82,8 @@ function atualizarCadastro() {
     ocultarContainer_Botao_Voltar.hidden = false;
     ocultarContainer_Botao_Proximo.hidden = true;
     visibilidade_Ou_Cadastrar.hidden = true;
-    
+    ocultarBotao_Google.hidden = true;
+
   }
 
   if (etapaAtual === 0) {

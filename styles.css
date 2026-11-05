@@ -204,12 +204,29 @@ body {
 }
 
 /* Botão Entrar */
-.botao-principal {
-  width: 100%;
+.botao-principal-entrar {
+  display: block;
+  width: 400px;
+  max-width: 100%;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  background: var(--laranja);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+} 
+
+.botao-principal-cadastrar {
+  width: 400px;
   margin-top: 10px;
   height: 40px;
   background: var(--laranja);     /* fundo laranja do botão */
-  color: #FFFFFF;                 /* texto branco fixo */
+  color:#FFFFFF;                 /* texto branco fixo */
   border: none;
   border-radius: 6px;
   font-size: 16px;
@@ -217,7 +234,9 @@ body {
   cursor: pointer;
   flex: 1;
   min-width: 0;
-}
+} 
+
+  
 
 /* Texto dos termos, no rodapé do card */
 .rodape-card {
