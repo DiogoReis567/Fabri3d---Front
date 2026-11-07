@@ -37,6 +37,21 @@ const labelConfirmarSenha = document.querySelector('#formulario-cadastro label[f
 
 const camposCodigo = document.querySelectorAll(".codigo-input");
 
+// ALTERADO: campos e olhos de senha, um por um (como estava antes)
+const campoSenhaLogin = document.getElementById("senha");
+const olhoAbertoLogin = document.getElementById("olho-aberto-login");
+const olhoFechadoLogin = document.getElementById("olho-fechado-login");
+
+const campoSenhaCadastro = document.getElementById("senha-cadastro");
+const olhoAbertoSenhaCadastro = document.getElementById("olho-aberto-senha-cadastro");
+const olhoFechadoSenhaCadastro = document.getElementById("olho-fechado-senha-cadastro");
+
+const campoConfirmarSenha = document.getElementById("confirmar-senha");
+const olhoAbertoConfirmarSenha = document.getElementById("olho-aberto-confirmar-senha");
+const olhoFechadoConfirmarSenha = document.getElementById("olho-fechado-confirmar-senha");
+
+let visibilidadeSenha = false;
+
 let abaAtualCadastro = [
   ["Nome de usuário", 1],
   ["Email", 2],
@@ -49,6 +64,41 @@ let ultimaEtapa = abaAtualCadastro.length - 1;
 
 barraEtapas.hidden = true;
 foco_Campo_Email_Login.focus();
+
+// ALTERADO: função com um bloco por campo, como estava antes
+function alternarVisibilidadeSenha() {
+  visibilidadeSenha = !visibilidadeSenha;
+
+  if (visibilidadeSenha) {
+    campoSenhaLogin.type = "text";
+    olhoAbertoLogin.hidden = true;
+    olhoFechadoLogin.hidden = false;
+  } else {
+    campoSenhaLogin.type = "password";
+    olhoAbertoLogin.hidden = false;
+    olhoFechadoLogin.hidden = true;
+  }
+
+  if (visibilidadeSenha) {
+    campoSenhaCadastro.type = "text";
+    olhoAbertoSenhaCadastro.hidden = true;
+    olhoFechadoSenhaCadastro.hidden = false;
+  } else {
+    campoSenhaCadastro.type = "password";
+    olhoAbertoSenhaCadastro.hidden = false;
+    olhoFechadoSenhaCadastro.hidden = true;
+  }
+
+  if (visibilidadeSenha) {
+    campoConfirmarSenha.type = "text";
+    olhoAbertoConfirmarSenha.hidden = true;
+    olhoFechadoConfirmarSenha.hidden = false;
+  } else {
+    campoConfirmarSenha.type = "password";
+    olhoAbertoConfirmarSenha.hidden = false;
+    olhoFechadoConfirmarSenha.hidden = true;
+  }
+}
 
 function atualizarBarraEtapas() {
   itensEtapas.forEach((item, indice) => {
@@ -67,7 +117,7 @@ function atualizarCadastro() {
 
   if (etapaAtual === 0) {
     botaoVoltar.hidden = true;
-    botaoProximo.hidden = false;
+    botaoProximo.hidden = false; 
     botao_Confirmar_Cadastro.hidden = true;
     ocultarContainer_Botao_Voltar.hidden = true;
     ocultarContainer_Botao_Proximo.hidden = false;
@@ -192,6 +242,14 @@ botaoLogin.addEventListener("click", mostrarFormularioLogin);
 botaoCadastrar.addEventListener("click", mostrarFormularioCadastro);
 botaoProximo.addEventListener("click", proximaEtapa);
 botaoVoltar.addEventListener("click", etapaAnterior);
+
+// ALTERADO: um listener por olho, como estava antes
+olhoAbertoLogin.addEventListener("click", alternarVisibilidadeSenha);
+olhoFechadoLogin.addEventListener("click", alternarVisibilidadeSenha);
+olhoAbertoSenhaCadastro.addEventListener("click", alternarVisibilidadeSenha);
+olhoFechadoSenhaCadastro.addEventListener("click", alternarVisibilidadeSenha);
+olhoAbertoConfirmarSenha.addEventListener("click", alternarVisibilidadeSenha);
+olhoFechadoConfirmarSenha.addEventListener("click", alternarVisibilidadeSenha);
 
 atualizarCadastro();
 

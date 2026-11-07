@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabri3D - Login</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="google.css">
-    
     <link rel="shortcut icon" href="assets/favicon/favicon.png" type="image/png">
-    
     <script src="login.js" defer></script>
-   
   </head>
   <body>
     <main class="pagina-login">
@@ -38,12 +34,12 @@
             <label for="senha">Senha</label>
             <div id="campo-senha">
               <img src="assets/icons/senha.svg" alt="" class="icone-input">
+              <img src="assets/icons/eye.svg" alt="" class="icone-input-olho" id="olho-aberto-login">
+              <img src="assets/icons/eye-off.svg" alt="" class="icone-input-olho" id="olho-fechado-login" hidden>
               <input id="senha" type="password" placeholder="Digite sua senha">
             </div>
 
-          
             <div class="container-opcoes-login">
-              
               <div class="item">
                 <!--Lembre de mim-->
                 <div class="caixa-lembre-de-mim">
@@ -61,60 +57,42 @@
             </div>
 
             <button type="submit" class="botao-principal-entrar">Entrar</button>
-            
-                        
-                <div id="separador">
-                  <hr class="linha-separadora">
-                    <p id="mensagem-separadora">Ou</p>
-                  <hr class="linha-separadora">
-                </div>
 
-<!--Botão google-->
-                <button class="gsi-material-button">
-  <div class="gsi-material-button-state"></div>
-  <div class="gsi-material-button-content-wrapper">
-    <div class="gsi-material-button-icon">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: block;">
-        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
-        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
-        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
-        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path>
-        <path fill="none" d="M0 0h48v48H0z"></path>
-      </svg>
-    </div>
-    <span class="gsi-material-button-contents">Fazer login com o Google</span>
-    <span style="display: none;">Sign in with Google</span>
-  </div>
-                </button>
-    </form>
+            <div id="separador">
+              <hr class="linha-separadora">
+              <p class="mensagem-separadora">Ou</p>
+              <hr class="linha-separadora">
+            </div>
+
+            <!--Botão google-->
+            <button class="gsi-material-button">
+              <div class="gsi-material-button-state"></div>
+              <div class="gsi-material-button-content-wrapper">
+                <div class="gsi-material-button-icon">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: block;">
+                    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
+                    <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
+                    <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
+                    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path>
+                    <path fill="none" d="M0 0h48v48H0z"></path>
+                  </svg>
+                </div>
+                <span class="gsi-material-button-contents">Fazer login com o Google</span>
+                <span style="display: none;">Sign in with Google</span>
+              </div>
+            </button>
+          </form>
 
           <!-- Cadastro -->
 
-                    <div id="etapas" hidden>
+          <div id="etapas" hidden>
             <ol id="lista-progresso">
-              <li class="etapa">
-                <span class="circulo">1</span>
-                <span>Nome</span>
-              </li>
-
-              <li class="etapa">
-                <span class="circulo">2</span>
-                <span>Email</span>
-              </li>
-
-              <li class="etapa">
-                <span class="circulo">3</span>
-                <span>Confirmação</span>
-              </li>
-
-              <li class="etapa">
-                <span class="circulo">4</span>
-                <span>Senha</span>
-              </li>
+              <li class="etapa"><span class="circulo">1</span><span>Nome</span></li>
+              <li class="etapa"><span class="circulo">2</span><span>Email</span></li>
+              <li class="etapa"><span class="circulo">3</span><span>Confirmação</span></li>
+              <li class="etapa"><span class="circulo">4</span><span>Senha</span></li>
             </ol>
           </div>
-
-
 
           <form class="formulario" id="formulario-cadastro" hidden>
             <label for="nome" hidden>Nome</label>
@@ -136,25 +114,29 @@
             </div>
 
             <div id="campo-confirmar-email" hidden>
-              <h3>Digite o código enviado para seuemail@exemplo.com</h3>
+              <h3 id="validacao-email-texto">Digite o código enviado para seuemail@exemplo.com</h3>
               <div id="codigo-container">
-                <input type="text" class="codigo-input" maxlength="1" >
-                <input type="text" class="codigo-input" maxlength="1" >
-                <input type="text" class="codigo-input" maxlength="1" >
-                <input type="text" class="codigo-input" maxlength="1" >
-                <input type="text" class="codigo-input" maxlength="1" >
+                <input type="text" class="codigo-input" maxlength="1">
+                <input type="text" class="codigo-input" maxlength="1">
+                <input type="text" class="codigo-input" maxlength="1">
+                <input type="text" class="codigo-input" maxlength="1">
+                <input type="text" class="codigo-input" maxlength="1">
               </div>
             </div>
 
             <label for="senha-cadastro" hidden>Senha</label>
-            <div id="campo-senha-cadastro" hidden>
+            <div id="campo-senha-cadastro" class="visibilidade-senha-cadastro" hidden>
               <img src="assets/icons/senha.svg" alt="" class="icone-input">
+              <img src="assets/icons/eye.svg" alt="" class="icone-input-olho" id="olho-aberto-senha-cadastro">
+              <img src="assets/icons/eye-off.svg" alt="" class="icone-input-olho" id="olho-fechado-senha-cadastro" hidden>
               <input id="senha-cadastro" type="password" placeholder="Digite sua senha">
             </div>
 
             <label for="confirmar-senha" hidden>Confirmar Senha</label>
-            <div id="campo-confirmar-senha" hidden>
+            <div id="campo-confirmar-senha" class="visibilidade-senha-cadastro" hidden>
               <img src="assets/icons/senha.svg" alt="" class="icone-input">
+              <img src="assets/icons/eye.svg" alt="" class="icone-input-olho" id="olho-aberto-confirmar-senha">
+              <img src="assets/icons/eye-off.svg" alt="" class="icone-input-olho" id="olho-fechado-confirmar-senha" hidden>
               <input id="confirmar-senha" type="password" placeholder="Confirme sua senha">
             </div>
 
@@ -165,43 +147,43 @@
                   Voltar
                 </button>
               </div>
+
               <div id="proximo-cadastro" hidden>
                 <button type="button" class="botao-ir-vir" id="botao-proximo">
                   Próximo
                   <img src="assets/icons/seta-direita.svg" alt="" id="seta-proximo">
                 </button>
               </div>
-              
-              
+
               <button type="submit" class="botao-principal-cadastrar" id="confirmar_cadastrar" hidden>Cadastrar</button>
             </div>
-            
+
             <div id="separador-cadastro" hidden>
               <hr class="linha-separadora">
-                <p id="mensagem-separadora">Ou</p>
+              <p class="mensagem-separadora">Ou</p>
               <hr class="linha-separadora">
             </div>
 
             <!--Botão Cadastro Google-->
-          
             <button class="gsi-material-button" id="botao-google-cadastrar" hidden>
-  <div class="gsi-material-button-state"></div>
-  <div class="gsi-material-button-content-wrapper">
-    <div class="gsi-material-button-icon">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: block;">
-        <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
-        <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
-        <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
-        <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path>
-        <path fill="none" d="M0 0h48v48H0z"></path>
-      </svg>
-    </div>
-    <span class="gsi-material-button-contents"> Inscrever-se com o Google</span>
-    <span style="display: none;">Sign up with Google</span>
-  </div>
+              <div class="gsi-material-button-state"></div>
+              <div class="gsi-material-button-content-wrapper">
+                <div class="gsi-material-button-icon">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: block;">
+                    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
+                    <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
+                    <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
+                    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path>
+                    <path fill="none" d="M0 0h48v48H0z"></path>
+                  </svg>
+                </div>
+                <span class="gsi-material-button-contents"> Inscrever-se com o Google</span>
+                <span style="display: none;">Sign up with Google</span>
+              </div>
             </button>
-          </form>        
-            <p class="rodape-card">Ao continuar, você concorda com os termos de uso e a política de privacidade do Fabri3D.</p>
+          </form>
+
+          <p class="rodape-card">Ao continuar, você concorda com os <a href="" class="termos-politica">termos de uso</a> e a <a href="" class="termos-politica">política de privacidade</a> do Fabri3D.</p>
         </div>
       </section>
     </main>

@@ -192,6 +192,18 @@ body {
   pointer-events: none; /* Permite clicar no campo mesmo sobre a área do ícone. */
 }
 
+.formulario .icone-input-olho {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+
+
 .formulario > div input {
   padding-left: 40px; /* Reserva espaço para o texto não ficar sobre o ícone. */
 }
@@ -201,7 +213,7 @@ body {
   display: block;
   width: 400px;
   max-width: 100%;
-  margin-top: 15px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   height: 40px;
@@ -234,10 +246,16 @@ body {
 
 /* Texto dos termos, no rodapé do card */
 .rodape-card {
-  margin-top: 12px;
-  font-size: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 14px;
+  font-size: 14px;
   text-align: center;
   color: #9CA3AF;
+}
+
+.termos-politica {
+  color: var(--laranja);
 }
 
 .botao-ir-vir {
@@ -311,8 +329,6 @@ body {
   border-radius: 8px;
   font-size: 24px;
   text-align: center;
-  border: solid 1px var(--laranja);
-  outline: var(--laranja);
 }
 
 #separador,
@@ -342,9 +358,15 @@ body {
   display: none;
 }
 
+#validacao-email-texto {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
 /* Barra de etapas do cadastro */
 #etapas {
-  margin-bottom: 24px;
+  margin-bottom: 5px;
 }
 
 #lista-progresso {
